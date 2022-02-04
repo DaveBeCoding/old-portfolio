@@ -1,0 +1,17 @@
+.navbar {
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  justify-content: space-around; /* space-evenly */
+  align-items: center;
+  border: 1px solid #666;
+  border-radius: 4px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.nav-item-1,
+.nav-item-2 {
+  padding-top: 10px;
+}

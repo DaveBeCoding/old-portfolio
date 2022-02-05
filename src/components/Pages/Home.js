@@ -93,9 +93,9 @@ class Home extends Component {
       <div id="home">
         <Bounce left>
           <section>
-            <p>
+            {/* <p>
               Welcome to my Portfolio
-            </p>
+            </p> */}
             {/* <br /> */}
             {/* <h2>Projects</h2> */}
             <hr />

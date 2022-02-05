@@ -100,6 +100,7 @@ class Home extends Component {
             {/* <h2>Projects</h2> */}
             <hr />
             {/* Crypto component */}
+            <CryptoPrice/>
             <p>
               {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
               nobis numquam odio, ea porro sint blanditiis nisi vitae alias

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
-import testimg from "./images/dress1.jpg";
+import testimg from "./images/test-00.jpg";
 
 export default class Products extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ export default class Products extends Component {
                       // }
                     }}
                   > */}
-                  {/* <img src={testimg} alt="the test" /> */}
+                  <img src={testimg} alt="the test" />
                   <img src={product.image} alt={product.title}></img>
                   <p>{product.title}</p>
                   {/* </a> */}

@@ -48,8 +48,8 @@ export default class Products extends Component {
                       // }
                     }}
                   > */}
-                  <img src={testimg} alt="the test" />
-                  <img src={product.image} alt={product.title}></img>
+                  {/* <img src={testimg} alt="the test" /> */}
+                  <img src={testimg} alt={product.title}></img>
                   <p>{product.title}</p>
                   {/* </a> */}
                   <div className="product-price">

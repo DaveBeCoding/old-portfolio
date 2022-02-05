@@ -2,7 +2,7 @@
     "products": [
       {
         "_id": "dress1",
-        "image": "/images/test2-1.jpg",
+        "image": "./images/dress2.jpg",
         "title": "Finder Example",
         "description": "Web Application to locate github users",
         "availableSizes": ["X", "L", "XL", "XXL"],

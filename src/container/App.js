@@ -15,8 +15,8 @@ class App extends Component {
   state = {
     headerName: "Welcome to the site",
     jobtitle: "Software Engineer",
-    gitLink: "https://github.com/nullbitcoder",
-    twitterLink: "https://twitter.com/nullcoder1",
+    gitLink: "https://github.com/davebecoding",
+    twitterLink: "https://twitter.com/",
     linkedInLink: "https://www.linkedin.com/",
   };
 

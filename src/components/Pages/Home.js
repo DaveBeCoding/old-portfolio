@@ -5,7 +5,9 @@ import Bounce from "react-reveal/Bounce";
 import LightSpeed from "react-reveal/LightSpeed";
 import Products from "../Products";
 
+// import data from "../../data.json";
 import data from "../../data.json";
+import CryptoPrice from "../Crypto/CryptoPrice";
 
 class Home extends Component {
   constructor() {
@@ -91,9 +93,13 @@ class Home extends Component {
       <div id="home">
         <Bounce left>
           <section>
-            <br />
-            <h2>Projects</h2>
-            <br />
+            <p>
+              Welcome to my Portfolio
+            </p>
+            {/* <br /> */}
+            {/* <h2>Projects</h2> */}
+            <hr />
+            {/* Crypto component */}
             <p>
               {/* Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere
               nobis numquam odio, ea porro sint blanditiis nisi vitae alias
@@ -204,7 +210,7 @@ class Home extends Component {
               blanditiis aliquam quas omnis? Fuga, ipsa quisquam! Maiores,
               cupiditate impedit veniam doloremque eveniet minima vel. Modi,
               delectus sint esse sit labore ratione aut */}
-              <hr />
+              {/* <hr /> */}
               <div id="boxstyle">
                 <LightSpeed right>
                   <div className="grid-container">
@@ -221,6 +227,7 @@ class Home extends Component {
                             filterProducts={this.filterProducts}
                             sortProducts={this.sortProducts}
                           ></Filter> */}
+                          {/* <CryptoPrice/> */}
                           <Products
                             products={this.state.products}
                             addToCart={this.addToCart}

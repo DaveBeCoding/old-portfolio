@@ -71,6 +71,7 @@ export default class Products extends Component {
               </button>
               <div className="product-details">
                 <img src={product.image} alt={product.title}></img>
+                <img src={product.image} alt={product.title}></img>
                 <div className="product-details-description">
                   <p>
                     <strong>{product.title}</strong>

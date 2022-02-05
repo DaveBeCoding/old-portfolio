@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
+import testimg from "./images/dress1.jpg";
 
 export default class Products extends Component {
   constructor(props) {
@@ -47,6 +48,7 @@ export default class Products extends Component {
                       // }
                     }}
                   > */}
+                  {/* <img src={testimg} alt="the test" /> */}
                   <img src={product.image} alt={product.title}></img>
                   <p>{product.title}</p>
                   {/* </a> */}
@@ -70,7 +72,8 @@ export default class Products extends Component {
                 x
               </button>
               <div className="product-details">
-                <img src={product.image} alt={product.title}></img>
+                {/* <img src={product.image} alt={product.title}></img> */}
+                {/* <img src={product.image} alt={product.title}></img> */}
                 <img src={product.image} alt={product.title}></img>
                 <div className="product-details-description">
                   <p>

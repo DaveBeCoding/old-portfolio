@@ -3,7 +3,8 @@
   z-index: 1;
   display: flex;
   width: 100%;
-  justify-content: space-around; /* space-evenly */
+  justify-content: space-around;
+  /* space-evenly */
   align-items: center;
   border: 1px solid #666;
   border-radius: 4px;

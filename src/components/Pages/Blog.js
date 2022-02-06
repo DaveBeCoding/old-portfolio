@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Slide from 'react-reveal/Slide';
 import Bounce from "react-reveal/Bounce";
 
 class Blog extends Component {
@@ -9,7 +8,7 @@ class Blog extends Component {
         <Bounce right>
           <section id="blog">
             <h2>Blog</h2>
-            <h1>{}</h1>
+            <h1>{ }</h1>
             <p>
               <strong>Coming Soon!</strong>
               <hr />
@@ -197,13 +196,6 @@ class Blog extends Component {
               veritatis mollitia earum velit possimus odio laborum voluptatem
               culpa exercitationem. Dolorem.
             </p>
-            {/* <ol>
-              <li>Nulla pulvinar diam</li>
-              <li>Facilisis bibendum</li>
-              <li>Vestibulum vulputate</li>
-              <li>Eget erat</li>
-              <li>Id porttitor</li>
-            </ol> */}
           </section>
         </Bounce>
       </div>

@@ -5,20 +5,6 @@ import cardano from "../images/cardano-48.png";
 import "./CryptoPrice.css";
 import axios from "axios";
 
-// const CryptoPrice = (params) => {
-//     const greeting = 'Crypto Component!';
-//     // create the API request here
-//     return <h1>{greeting}</h1>;
-
-// }
-
-// export default CryptoPrice;
-
-
-
-// public/images/bitcoin-logo.png
-
-
 const CryptoPrice = () => {
     const [loading, setLoading] = useState(true);
     const [btc, setBtc] = useState(null);

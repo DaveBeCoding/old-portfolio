@@ -37,21 +37,8 @@ export default class Products extends Component {
             {this.props.products.map((product) => (
               <li key={product._id}>
                 <div className="product">
-                  {/* <a
-                    href={"/" + product._id}
-                    // onClick={() => this.openModal(product)}
-                    onClick={() => {
-                      // if ("dress1") {
-                      //   window.open("https://www.github.com/", "_blank");
-                      // } else if ("dress2") {
-                      //   window.open("https://www.google.com/", "_blank");
-                      // }
-                    }}
-                  > */}
-                  {/* <img src={testimg} alt="the test" /> */}
                   <img src={testimg} alt={product.title}></img>
                   <p>{product.title}</p>
-                  {/* </a> */}
                   <div className="product-price">
                     <button
                       onClick={() => this.checkid(product._id)}
@@ -72,8 +59,6 @@ export default class Products extends Component {
                 x
               </button>
               <div className="product-details">
-                {/* <img src={product.image} alt={product.title}></img> */}
-                {/* <img src={product.image} alt={product.title}></img> */}
                 <img src={product.image} alt={product.title}></img>
                 <div className="product-details-description">
                   <p>
@@ -109,3 +94,5 @@ export default class Products extends Component {
     );
   }
 }
+
+// npm run deploy

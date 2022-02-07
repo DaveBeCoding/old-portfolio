@@ -17,7 +17,7 @@ const CryptoPrice = () => {
                 .then((response) => {
                     setBtc(response.data[0].current_price);
                     setEth(response.data[1].current_price);
-                    setAda(response.data[5].current_price);
+                    setAda(response.data[6].current_price);
                     setLoading(false);
                 })
                 .catch((error) => {

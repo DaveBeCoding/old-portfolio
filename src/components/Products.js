@@ -18,7 +18,6 @@ export default class Products extends Component {
     this.setState({ product: null });
   };
   checkid = (product) => {
-    console.log("this is the id, " + product);
     if (product === "dress1") {
       window.open("https://finder-gh-app.herokuapp.com/", "_blank");
     } else if (product === "dress2") {

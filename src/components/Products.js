@@ -20,11 +20,11 @@ export default class Products extends Component {
   checkid = (product) => {
     console.log("this is the id, " + product);
     if (product === "dress1") {
-      window.open("https://www.google.com/", "_blank");
+      window.open("https://finder-gh-app.herokuapp.com/", "_blank");
     } else if (product === "dress2") {
-      window.open("https://www.yahoo.com/", "_blank");
+      window.open("https://cart-ecom.herokuapp.com/", "_blank");
     } else {
-      window.open("https://www.github.com/", "_blank");
+      window.open("https://github.com/DaveBeCoding", "_blank");
     }
   };
 

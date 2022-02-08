@@ -6,13 +6,15 @@ import LightSpeed from "react-reveal/LightSpeed";
 import Products from "../Products";
 
 import data from "../../data.json";
+import test from "../test.json"
 import CryptoPrice from "../Crypto/CryptoPrice";
 
 class Home extends Component {
   constructor() {
     super();
     this.state = {
-      products: data.products,
+      // products: data.products,
+      products: test.products,
       cartItems: localStorage.getItem("cartItems")
         ? JSON.parse(localStorage.getItem("cartItems"))
         : [],

@@ -1,0 +1,41 @@
+{
+    "products": [
+      {
+        "_id": "dress1",
+        "image": "./images/finder.png",
+        "title": "Finder Example",
+        "description": "Web Application to locate github users",
+        "availableSizes": [
+          "X",
+          "L",
+          "XL",
+          "XXL"
+        ],
+        "price": 29.9
+      },
+      {
+        "_id": "dress2",
+        "image": "/images/dress2.jpg",
+        "title": "Ecommerce Example",
+        "description": "Example of the purchasing section of ecom site",
+        "availableSizes": [
+          "X",
+          "M",
+          "L"
+        ],
+        "price": 18.9
+      },
+      {
+        "_id": "dress3",
+        "image": "/images/dress3.jpg",
+        "title": "Crypto Example",
+        "description": "Crypto tracker",
+        "availableSizes": [
+          "X",
+          "M",
+          "L"
+        ],
+        "price": 14.9
+      }
+    ]
+  }

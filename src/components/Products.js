@@ -34,15 +34,15 @@ export default class Products extends Component {
 
   checkimage = (img) => {
     if (img.product.image === finder.png) {
-      <img src={finder} alt={finder}></img>
+      return <img src={finder} alt={finder}></img>
     }
     else {
-      <img src={ecom} alt={ecom}></img>
+      return <img src={ecom} alt={ecom}></img>
     }
   } //check image to display manually
 
   render() {
-    const { product } = this.state;
+    // const { product } = this.state;
     return (
       <div>
         <Fade bottom cascade>

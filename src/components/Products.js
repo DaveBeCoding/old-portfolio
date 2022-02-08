@@ -4,6 +4,7 @@ import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
 import testimg from "./images/ecom.png";
 import ecom from "./images/ecom.png";
+import finder from "./images/finder.png";
 
 export default class Products extends Component {
   constructor(props) {
@@ -12,12 +13,15 @@ export default class Products extends Component {
       product: null,
     };
   }
+
   openModal = (product) => {
     this.setState({ product });
   };
+
   closeModal = () => {
     this.setState({ product: null });
   };
+
   checkid = (product) => {
     if (product === "dress1") {
       window.open("https://finder-gh-app.herokuapp.com/", "_blank");
@@ -28,6 +32,15 @@ export default class Products extends Component {
     }
   };
 
+  checkimage = (img) => {
+    if (img.product.image === finder.png) {
+      <img src={finder} alt={finder}></img>
+    }
+    else {
+      <img src={ecom} alt={ecom}></img>
+    }
+  } //check image to display manually
+
   render() {
     const { product } = this.state;
     return (
@@ -37,7 +50,9 @@ export default class Products extends Component {
             {this.props.products.map((product) => (
               <li key={product._id}>
                 <div className="product">
-                  <img src={testimg} alt={product.title}></img>
+                  <img src={finder} alt={product.title}></img>
+                  {/* <img src={ecom} alt={product.title}></img> */}
+                  {/* <img src={product.image} alt={product.title}></img> */}
                   <p>{product.title}</p>
                   <div className="product-price">
                     <button
@@ -50,49 +65,63 @@ export default class Products extends Component {
                 </div>
               </li>
             ))}
+
           </ul>
         </Fade>
-        {product && (
-          <Modal isOpen={true} onRequestClose={this.closeModal}>
-            <Zoom>
-              <button className="close-modal" onClick={this.closeModal}>
-                x
-              </button>
-              <div className="product-details">
-                <img src={product.image} alt={product.title}></img>
-                <div className="product-details-description">
-                  <p>
-                    <strong>{product.title}</strong>
-                  </p>
-                  <p>{product.description}</p>
-                  <p>
-                    Avaiable Sizes:{" "}
-                    {product.availableSizes.map((x) => (
-                      <span>
-                        {" "}
-                        <button className="button">{x}</button>
-                      </span>
-                    ))}
-                  </p>
-                  <div className="product-price">
-                    <button
-                      className="button primary"
-                      onClick={() => {
-                        this.props.addToCart(product);
-                        this.closeModal();
-                      }}
-                    >
-                      Add To Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </Zoom>
-          </Modal>
-        )}
+        {/* 
+            
+          section remove, located below
+
+         */}
       </div>
     );
   }
 }
 
 // npm run deploy
+
+
+
+
+
+
+
+// {product && (
+//   <Modal isOpen={true} onRequestClose={this.closeModal}>
+//     <Zoom>
+//       <button className="close-modal" onClick={this.closeModal}>
+//         x
+//       </button>
+//       <div className="product-details">
+//         {/* <img src={product.image} alt={product.title}></img> */}
+//         <img src={finder} alt={product.title}></img>
+//         <div className="product-details-description">
+//           <p>
+//             <strong>{product.title}</strong>
+//           </p>
+//           <p>{product.description}</p>
+//           <p>
+//             Avaiable Sizes:{" "}
+//             {product.availableSizes.map((x) => (
+//               <span>
+//                 {" "}
+//                 <button className="button">{x}</button>
+//               </span>
+//             ))}
+//           </p>
+//           <div className="product-price">
+//             <button
+//               className="button primary"
+//               onClick={() => {
+//                 this.props.addToCart(product);
+//                 this.closeModal();
+//               }}
+//             >
+//               Add To Cart
+//             </button>
+//           </div>
+//         </div>
+//       </div>
+//     </Zoom>
+//   </Modal>
+// )}

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import Modal from "react-modal";
 // import Zoom from "react-reveal/Zoom";
-// import testimg from "./images/ecom.png";
+import testimg from "./images/finder.png";
 import ecom from "./images/ecom.png";
 import finder from "./images/finder.png";
 
@@ -11,6 +11,8 @@ export default class Products extends Component {
     super(props);
     this.state = {
       product: null,
+      images: [finder, ecom, testimg],
+      index: 0
     };
   }
 

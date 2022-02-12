@@ -11,8 +11,7 @@ export default class Products extends Component {
     super(props);
     this.state = {
       product: null,
-      images: [finder, ecom, testimg],
-      index: 0
+      images: [finder, ecom, testimg]
     };
   }
 

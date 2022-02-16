@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-// import Modal from "react-modal";
-// import Zoom from "react-reveal/Zoom";
 import testimg from "./images/finder.png";
 import ecom from "./images/ecom.png";
 import finder from "./images/finder.png";
@@ -39,13 +37,11 @@ export default class Products extends Component {
     } else if (product === "dress2") {
       return ecom;
     } else {
-      // <img src={finder} alt={product.title}></img>
       return finder;
     }
   } //check image to display manually
-  
+
   render() {
-    // const { product } = this.state;
     return (
       <div>
         <Fade bottom cascade>
@@ -53,11 +49,7 @@ export default class Products extends Component {
             {this.props.products.map((product) => (
               <li key={product._id}>
                 <div className="product">
-                  {/* let myimg = this.checkimage(product) */}
-                  {/* <img src={finder} alt={product.title}></img> */}
-                  {console.log(this.checkimage(product._id))}
                   <img src={this.checkimage(product._id)} alt={product.title}></img>
-                  {/* <img src={product.image} alt={product.title}></img> */}
                   <p>{product.title}</p>
                   <div className="product-price">
                     <button
@@ -73,60 +65,9 @@ export default class Products extends Component {
 
           </ul>
         </Fade>
-        {/* 
-            
-          section remove, located below
-
-         */}
       </div>
     );
   }
 }
 
 // npm run deploy
-
-
-
-
-
-
-
-// {product && (
-//   <Modal isOpen={true} onRequestClose={this.closeModal}>
-//     <Zoom>
-//       <button className="close-modal" onClick={this.closeModal}>
-//         x
-//       </button>
-//       <div className="product-details">
-//         {/* <img src={product.image} alt={product.title}></img> */}
-//         <img src={finder} alt={product.title}></img>
-//         <div className="product-details-description">
-//           <p>
-//             <strong>{product.title}</strong>
-//           </p>
-//           <p>{product.description}</p>
-//           <p>
-//             Avaiable Sizes:{" "}
-//             {product.availableSizes.map((x) => (
-//               <span>
-//                 {" "}
-//                 <button className="button">{x}</button>
-//               </span>
-//             ))}
-//           </p>
-//           <div className="product-price">
-//             <button
-//               className="button primary"
-//               onClick={() => {
-//                 this.props.addToCart(product);
-//                 this.closeModal();
-//               }}
-//             >
-//               Add To Cart
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-//     </Zoom>
-//   </Modal>
-// )}

@@ -5,7 +5,6 @@ import Bounce from "react-reveal/Bounce";
 import LightSpeed from "react-reveal/LightSpeed";
 import Products from "../Products";
 
-import data from "../../data.json";
 import test from "../test.json"
 import CryptoPrice from "../Crypto/CryptoPrice";
 
@@ -56,7 +55,7 @@ class Home extends Component {
               <h1>About the Projects</h1>
               <br />
               <strong>In progress!</strong>
-              <br/>
+              <br />
               asperiores sapiente facilis ipsa quaerat totam deserunt dolore
               recusandae voluptas odit mollitia aperiam provident iusto,
               deleniti nihil accusantium quod? Nulla, temporibus dolorum.

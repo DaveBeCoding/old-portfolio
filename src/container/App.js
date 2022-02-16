@@ -69,7 +69,6 @@ class App extends Component {
                   <FaLinkedinIn />
                 </a>
                 <NavLink to="/linkedin"></NavLink>
-                {/*  */}
               </li>
             </ul>
           </LightSpeed>

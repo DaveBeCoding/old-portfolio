@@ -45,7 +45,7 @@ class Home extends Component {
                         </div>
                       </div>
                     </main>
-                    <footer>All right is reserved</footer>
+                    <footer>   </footer>
                   </div>
                 </LightSpeed>
               </div>

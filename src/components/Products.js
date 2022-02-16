@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-import Modal from "react-modal";
+// import Modal from "react-modal";
 // import Zoom from "react-reveal/Zoom";
 // import testimg from "./images/ecom.png";
 import ecom from "./images/ecom.png";
@@ -32,15 +32,17 @@ export default class Products extends Component {
     }
   };
 
-  checkimage = (img) => {
-    if (img.product.image === finder.png) {
-      return <img src={finder} alt={finder}></img>
-    }
-    else {
-      return <img src={ecom} alt={ecom}></img>
+  checkimage = (product) => {
+    if (product === "dress1") {
+      return finder;
+    } else if (product === "dress2") {
+      return ecom;
+    } else {
+      // <img src={finder} alt={product.title}></img>
+      return finder;
     }
   } //check image to display manually
-
+  
   render() {
     // const { product } = this.state;
     return (
@@ -50,8 +52,10 @@ export default class Products extends Component {
             {this.props.products.map((product) => (
               <li key={product._id}>
                 <div className="product">
-                  <img src={finder} alt={product.title}></img>
-                  {/* <img src={ecom} alt={product.title}></img> */}
+                  {/* let myimg = this.checkimage(product) */}
+                  {/* <img src={finder} alt={product.title}></img> */}
+                  {console.log(this.checkimage(product._id))}
+                  <img src={this.checkimage(product._id)} alt={product.title}></img>
                   {/* <img src={product.image} alt={product.title}></img> */}
                   <p>{product.title}</p>
                   <div className="product-price">

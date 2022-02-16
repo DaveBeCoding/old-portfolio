@@ -10,14 +10,21 @@ const CryptoPrice = () => {
     const [btc, setBtc] = useState(null);
     const [eth, setEth] = useState(null);
     const [ada, setAda] = useState(null);
+    const [btcName, setBtcName] = useState(null);
+    const [EthName, setEthName] = useState(null);
+    const [adaName, setAdaName] = useState(null);
 
     const intervalid = setInterval(
         useEffect(() => {
             axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
                 .then((response) => {
+                    console.log(response.data);
                     setBtc(response.data[0].current_price);
                     setEth(response.data[1].current_price);
                     setAda(response.data[6].current_price);
+                    setBtcName(response.data[0].name);
+                    setEthName(response.data[1].name);
+                    setAdaName(response.data[6].name);
                     setLoading(false);
                 })
                 .catch((error) => {
@@ -30,15 +37,15 @@ const CryptoPrice = () => {
         <div className="btc">
             <img className="btc-logo" src={logo} alt="Bitcoin" />
             <span className="btc-price">
-                {loading ? "LOADING" : "$" + btc.toLocaleString()}
+                {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
             </span>
             <img className="btc-logo" src={ethereum} alt="Bitcoin" />
             <span className="btc-price">
-                {loading ? "LOADING" : "$" + eth.toLocaleString()}
+                {loading ? "LOADING" : EthName + " $" + eth.toLocaleString()}
             </span>
             <img className="btc-logo" src={cardano} alt="Bitcoin" />
             <span className="btc-price">
-                {loading ? "LOADING" : "$" + ada.toLocaleString()}
+                {loading ? "LOADING" : adaName +" $" + ada.toLocaleString()}
             </span>
         </div>
 

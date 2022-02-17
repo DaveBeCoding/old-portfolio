@@ -27,7 +27,7 @@ export default class Products extends Component {
     } else if (product === "dress2") {
       window.open("https://cart-ecom.herokuapp.com/", "_blank");
     } else {
-      window.open("https://github.com/DaveBeCoding", "_blank");
+      window.open("https://cryptosearch-app.herokuapp.com/", "_blank");
     }
   };
 

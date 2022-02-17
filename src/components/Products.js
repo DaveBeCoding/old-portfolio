@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
-import testimg from "./images/finder.png";
+import testimg from "./images/test-Crypto.png";
 import ecom from "./images/ecom.png";
 import finder from "./images/finder.png";
 
@@ -37,7 +37,7 @@ export default class Products extends Component {
     } else if (product === "dress2") {
       return ecom;
     } else {
-      return finder;
+      return testimg;
     }
   } //check image to display manually
 

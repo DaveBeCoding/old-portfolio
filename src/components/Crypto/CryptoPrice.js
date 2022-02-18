@@ -45,7 +45,7 @@ const CryptoPrice = () => {
             </span>
             <img className="btc-logo" src={cardano} alt="Bitcoin" />
             <span className="btc-price">
-                {loading ? "LOADING" : adaName +" $" + ada.toLocaleString()}
+                {loading ? "LOADING" : adaName +" $" + ada.toFixed(2)}
             </span>
         </div>
 

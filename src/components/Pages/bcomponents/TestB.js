@@ -30,9 +30,14 @@ const Block = styled.div`
   }
 `;
 
+
+const testRun = () => {
+  console.log('test');
+}
+
 const Google = () => (
     <Block>
-      <h1>Stock trading Project</h1>
+      <h1 onClick={testRun}>Stock trading Project</h1>
       <p>This is Project. It's a search engine started by Dave and Dave.</p>
       <p>PageRank is the search algorithm that started it all. Today it's a multibillion dollar company.</p>      
     </Block>

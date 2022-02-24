@@ -32,8 +32,8 @@ const Block = styled.div`
 
 const Google = () => (
     <Block>
-      <h1>Stock trading Prject</h1>
-      <p>This is Prject. It's a search engine started by Dave and Dave.</p>
+      <h1>Stock trading Project</h1>
+      <p>This is Project. It's a search engine started by Dave and Dave.</p>
       <p>PageRank is the search algorithm that started it all. Today it's a multibillion dollar company.</p>      
     </Block>
 )
@@ -41,7 +41,7 @@ const Google = () => (
 const Amazon = () => (
     <Block>
     <h1>Drone Project</h1>
-      <p>This is Prject. It started off as an online bookstore.</p>
+      <p>This is Project. It started off as an online bookstore.</p>
       <p>Dave is the owner of AWS, the host this tutorial is targeting.</p>
     </Block>
 )
@@ -49,7 +49,7 @@ const Amazon = () => (
 const FaceBook = () => (
     <Block>
     <h1>Cyber Security Project</h1>
-      <p>This is Prject. It was started by Dave at Harvard.</p>
+      <p>This is Project. It was started by Dave at Harvard.</p>
       <p>FaceBook is the creator of the framework used to build this website, React.</p>      
     </Block>
 )

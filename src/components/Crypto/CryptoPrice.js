@@ -21,10 +21,10 @@ const CryptoPrice = () => {
                     console.log(response.data);
                     setBtc(response.data[0].current_price);
                     setEth(response.data[1].current_price);
-                    setAda(response.data[6].current_price);
+                    setAda(response.data[7].current_price);
                     setBtcName(response.data[0].name);
                     setEthName(response.data[1].name);
-                    setAdaName(response.data[6].name);
+                    setAdaName(response.data[7].name);
                     setLoading(false);
                 })
                 .catch((error) => {

@@ -33,10 +33,16 @@ const CryptoPrice = () => {
         }, []))
     clearInterval(intervalid);
 
+    function changeBackground(e) {
+        e.target.style.background = 'red';
+      }
+
     return (
         <div className="btc">
             <img className="btc-logo" src={logo} alt="Bitcoin" />
-            <span className="btc-price">
+            {/* <span className="btc-price" nMouseOver={changeBackground}> */}
+            <span className="btc-price" >
+
                 {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
             </span>
             <img className="btc-logo" src={ethereum} alt="Bitcoin" />

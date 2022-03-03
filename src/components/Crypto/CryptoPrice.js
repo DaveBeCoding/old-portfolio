@@ -37,32 +37,31 @@ const CryptoPrice = () => {
         }, []))
     clearInterval(intervalid);
 
-    const changeBackground = (e) => {
+    // const changeBackground = (e) => {
 
-    }
+    // }
 
 
     const showButton = e => {
         e.preventDefault();
         setDisplay("displayed");
-    };
+    }
 
     const hideButton = e => {
         e.preventDefault();
         setDisplay("notdisplayed");
-    };
+    }
 
     return (
         <div className="btc">
             <img className="btc-logo" src={logo} alt="Bitcoin" />
+            <span class="tooltip" data-tooltip={"24hr change" + btc24H}></span>
             {/* <span className="btc-price" onMouseOver={changeBackground}/> */}
-            <span className="btc-price" onMouseEnter={e => showButton(e)}
-                onMouseLeave={e => hideButton(e)}>
-
+            <span className="btc-price">
+                {/* <button className={display}>I might be an invisible button</button> */}
                 {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
                 {/* <div className={style}>"24hr change "{btc24H}</div> */}
             </span>
-            <button className={display}>I might be an invisible button</button>
             <img className="btc-logo" src={ethereum} alt="Bitcoin" />
             <span className="btc-price">
                 {loading ? "LOADING" : EthName + " $" + eth.toLocaleString()}
@@ -79,6 +78,25 @@ const CryptoPrice = () => {
 
 
 export default CryptoPrice;
+
+
+
+
+
+
+
+
+
+
+
+// <span className="btc-price" onMouseEnter={e => showButton(e)}
+//                 onMouseLeave={e => hideButton(e)}>
+
+//                 <button className={display}>I might be an invisible button</button>
+//                 {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
+//                 {/* <div className={style}>"24hr change "{btc24H}</div> */}
+//             </span>
+
 
 
 

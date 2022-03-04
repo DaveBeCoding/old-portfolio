@@ -48,22 +48,21 @@ const CryptoPrice = () => {
             {/* <span className="btc-price" onMouseOver={changeBackground}/> */}
             <span className="btc-price" data-tip data-for="registerTip">
                 <ReactTooltip id="registerTip" place="top" effect="solid">
-                    {"24hr change %" + btc24H.toFixed(2)}
+                    {"24hr change %" + btc24H}
                 </ReactTooltip>
                 {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
             </span>
             <img className="btc-logo" src={ethereum} alt="Bitcoin" />
             <span className="btc-price" data-tip data-for="registerTip">
                 <ReactTooltip id="registerTip" place="top" effect="solid">
-                    {"24hr change %" + eth24H.toFixed(2)}
+                    {"24hr change %" + eth24H}
                 </ReactTooltip>
                 {loading ? "LOADING" : ethName + " $" + eth.toLocaleString()}
             </span>
             <img className="btc-logo" src={cardano} alt="Bitcoin" />
             <span className="btc-price" data-tip data-for="registerTip">
                 <ReactTooltip id="registerTip" place="top" effect="solid">
-                    {"24hr change %" + ada24H.toFixed(2)}
-
+                    {"24hr change %" + ada24H}
                 </ReactTooltip>
                 {loading ? "LOADING" : adaName + " $" + ada.toFixed(2)}
             </span>
@@ -72,4 +71,45 @@ const CryptoPrice = () => {
     );
 };
 
+
+
 export default CryptoPrice;
+
+
+
+
+
+
+
+
+
+
+
+// <span className="btc-price" onMouseEnter={e => showButton(e)}
+//                 onMouseLeave={e => hideButton(e)}>
+
+//                 <button className={display}>I might be an invisible button</button>
+//                 {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
+//                 {/* <div className={style}>"24hr change "{btc24H}</div> */}
+//             </span>
+
+
+
+
+
+
+
+
+// <div className="App">
+//             <h2>Hidden Button in the box. Move mouse in the box</h2>
+//             <div style={{border: '1px solid gray', width: 300, height: 300, padding: 10, margin: 100}}
+//                  onMouseEnter={e => {
+//                      setStyle({display: 'block'});
+//                  }}
+//                  onMouseLeave={e => {
+//                      setStyle({display: 'none'})
+//                  }}
+//             >
+//                 <button style={style}>Click</button>
+//             </div>
+//         </div>

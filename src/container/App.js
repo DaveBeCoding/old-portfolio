@@ -15,8 +15,8 @@ class App extends Component {
     headerName: "Welcome to the site",
     jobtitle: "Software Engineer",
     gitLink: "https://github.com/davebecoding",
-    twitterLink: "https://twitter.com/",
-    linkedInLink: "https://www.linkedin.com/",
+    twitterLink: "https://twitter.com/cryptomontana01",
+    linkedInLink: "https://www.linkedin.com/in/david-johnson-382534230/",
   };
 
 

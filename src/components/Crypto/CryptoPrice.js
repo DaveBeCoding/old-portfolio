@@ -17,13 +17,15 @@ const CryptoPrice = () => {
     const [btcName, setBtcName] = useState(null);
     const [ethName, setEthName] = useState(null);
     const [adaName, setAdaName] = useState(null);
+    const [screenSize, setScreenSize] = useState(true);
+
 
     const intervalid = setInterval(
         useEffect(() => {
             axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency="
                 + "usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
                 .then((response) => {
-                    console.log(response.data);
+                    // console.log(response.data);
                     setBtc(response.data[0].current_price);
                     setEth(response.data[1].current_price);
                     setAda(response.data[8].current_price);
@@ -34,32 +36,36 @@ const CryptoPrice = () => {
                     setEth24H(response.data[1].price_change_percentage_24h);
                     setAda24H(response.data[8].price_change_percentage_24h);
                     setLoading(false);
+                    setScreenSize(window.devicePixelRatio > 1 
+                        ? false
+                        : {} ) //do nothing
                 })
                 .catch((error) => {
                     console.log(error);
                 });
-        }, []))
+        }, [screenSize]))
     clearInterval(intervalid);
+
 
     return (
         <div className="btc">
-            <img className="btc-logo" src={logo} alt="Bitcoin" />
-            {/* <span class="tooltip" data-tooltip={"24hr change" + btc24H}></span> */}
-            {/* <span className="btc-price" onMouseOver={changeBackground}/> */}
+
+            {/* <h1>{console.log('test bot ', window.devicePixelRatio)}</h1> */}
+            {screenSize && <img className="btc-logo" src={logo} alt="Bitcoin" />}
             <span className="btc-price" data-tip data-for="registerTip">
                 <ReactTooltip id="registerTip" place="top" effect="solid">
                     {"24hr change %" + btc24H}
                 </ReactTooltip>
                 {loading ? "LOADING" : btcName + " $" + btc.toLocaleString()}
             </span>
-            <img className="btc-logo" src={ethereum} alt="Bitcoin" />
+            {screenSize && <img className="btc-logo" src={ethereum} alt="Bitcoin" />}
             <span className="btc-price" data-tip data-for="registerTip">
                 <ReactTooltip id="registerTip" place="top" effect="solid">
                     {"24hr change %" + eth24H}
                 </ReactTooltip>
                 {loading ? "LOADING" : ethName + " $" + eth.toLocaleString()}
             </span>
-            <img className="btc-logo" src={cardano} alt="Bitcoin" />
+            {screenSize && <img className="btc-logo" src={cardano} alt="Bitcoin" />}
             <span className="btc-price" data-tip data-for="registerTip">
                 <ReactTooltip id="registerTip" place="top" effect="solid">
                     {"24hr change %" + ada24H}

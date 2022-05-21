@@ -4,7 +4,7 @@ import LightSpeed from 'react-reveal/LightSpeed';
 class Contact extends Component {
   render() {
     return (
-      <div id="contact">
+      <div id='contact'>
         <LightSpeed right>
           <section>
             <h2>Contact</h2>

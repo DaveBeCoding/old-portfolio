@@ -1,13 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-// import BModal from './BModal/BModal';
-import Modal from 'react-bootstrap/Modal';
-import { Button } from 'react-bootstrap';
-import BModal from './Blog_Modal';
 import Post_01 from './Articles/Post_01';
 import Post_02 from './Articles/Post_02';
 import Post_03 from './Articles/Post_03';
 import Post_04 from './Articles/Post_04';
+import Post_Test from './Articles/TEST_ARTICLES/Post_Test';
 
 import './tesstb.css';
 
@@ -31,6 +28,7 @@ const Blog_Layout = () => {
         <Post_02 />
         <Post_03 />
         <Post_04 />
+        {/* <Post_Test /> */}
       </Primary>
     </Wrap>
   );

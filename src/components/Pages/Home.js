@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import Bounce from "react-reveal/Bounce";
+import Bounce from 'react-reveal/Bounce';
 
-import LightSpeed from "react-reveal/LightSpeed";
-import Products from "../Products";
+import LightSpeed from 'react-reveal/LightSpeed';
+import Products from '../Products';
 
-import test from "../test.json"
-import CryptoPrice from "../Crypto/CryptoPrice";
+import test from '../test.json';
+import CryptoPrice from '../Crypto/CryptoPrice';
 
 class Home extends Component {
   constructor() {
@@ -14,38 +14,37 @@ class Home extends Component {
     this.state = {
       // products: data.products,
       products: test.products,
-      cartItems: localStorage.getItem("cartItems")
-        ? JSON.parse(localStorage.getItem("cartItems"))
+      cartItems: localStorage.getItem('cartItems')
+        ? JSON.parse(localStorage.getItem('cartItems'))
         : [],
-      size: "",
-      sort: "",
+      size: '',
+      sort: '',
     };
   }
 
   render() {
     return (
-      <div id="home">
+      <div id='home'>
         <Bounce left>
           <section>
             <hr />
             <CryptoPrice />
             <p>
-              <div id="boxstyle">
+              <div id='boxstyle'>
                 <LightSpeed right>
-                  <div className="grid-container">
+                  <div className='grid-container'>
                     <main>
-                      <div className="content">
-                        <div className="main">
+                      <div className='content'>
+                        <div className='main'>
                           <Products
                             products={this.state.products}
                             addToCart={this.addToCart}
                           ></Products>
                         </div>
-                        <div className="sidebar">
-                        </div>
+                        <div className='sidebar'></div>
                       </div>
                     </main>
-                    <footer>   </footer>
+                    <footer> </footer>
                   </div>
                 </LightSpeed>
               </div>

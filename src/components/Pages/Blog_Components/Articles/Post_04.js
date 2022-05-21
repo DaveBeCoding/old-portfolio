@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Modal from 'react-bootstrap/Modal';
 import styled from 'styled-components';
 import { Button } from 'react-bootstrap';
 
@@ -19,13 +20,94 @@ const Block = styled.div`
   }
 `;
 
-const Post_04 = (props) => (
-  <Block>
-    <h1>Abstract Math Project</h1>
-    <p>This is Apple. It's CEO is Tim Cook.</p>
-    <p>Apple manufactures the iPhone and the Mac.</p>
-    <div className='cls-modal'>{/* <BModal /> */}</div>
-  </Block>
-);
+const Post_04 = (props) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  return (
+    <Block>
+      <h1>Abstract Math Project</h1>
+      <p>This is Apple. It's CEO is Tim Cook.</p>
+      <p>Apple manufactures the iPhone and the Mac.</p>
+      {/* Modal button */}
+
+      <Button variant='primary' onClick={handleShow}>
+        View
+      </Button>
+
+      {/* Modal */}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h1>Post_04</h1>
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal!Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal!Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a modal!
+          Woohoo, you're reading this text in a modal! Woohoo, you're reading
+          this text in a modal! Woohoo, you're reading this text in a
+          modal!Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal!Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal!Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal!Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+          reading this text in a modal! Woohoo, you're reading this text in a
+          modal!
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant='primary' className='cls-modal' onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </Block>
+  );
+};
 
 export default Post_04;

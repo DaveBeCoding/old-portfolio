@@ -26,89 +26,107 @@ const Post_01 = (props) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <Block>
-      <h1>Stock trading Project</h1>
-      <p>This is Project. It's a search engine started by Dave and Dave.</p>
-      <p>
-        PageRank is the search algorithm that started it all. Today it's a
-        multibillion dollar company.
-      </p>
-      <Button variant='primary' onClick={handleShow}>
-        View
-      </Button>
+    <>
+      <Block>
+        <h1>Stock trading Project</h1>
+        <p>This is Project. It's a search engine started by Dave and Dave.</p>
+        <p>
+          PageRank is the search algorithm that started it all. Today it's a
+          multibillion dollar company.
+        </p>
 
-      {/* Modal */}
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <h1>Post_01</h1>
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal!Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal!Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a modal!
-          Woohoo, you're reading this text in a modal! Woohoo, you're reading
-          this text in a modal! Woohoo, you're reading this text in a
-          modal!Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal!Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal!Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal!Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal! Woohoo, you're reading this text in a modal! Woohoo, you're
-          reading this text in a modal! Woohoo, you're reading this text in a
-          modal!
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant='primary' className='cls-modal' onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </Block>
+        {/* Modal button */}
+
+        <Button
+          variant='primary'
+          // className='class-open-btn text-center'
+          onClick={handleShow}
+        >
+          View
+        </Button>
+
+        {/* Modal */}
+        <Modal
+          show={show}
+          onHide={handleClose}
+          aria-labelledby='contained-modal-title-vcenter'
+          centered
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h1>Post_01</h1>
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal!Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal!Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a modal!
+            Woohoo, you're reading this text in a modal! Woohoo, you're reading
+            this text in a modal! Woohoo, you're reading this text in a
+            modal!Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal!Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal!Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal!Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal! Woohoo, you're reading this text in a modal! Woohoo, you're
+            reading this text in a modal! Woohoo, you're reading this text in a
+            modal!
+          </Modal.Body>
+          <Modal.Footer>
+            <Button
+              variant='primary'
+              className='cls-modal'
+              onClick={handleClose}
+            >
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </Block>
+    </>
   );
 };
 

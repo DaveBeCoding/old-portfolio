@@ -86,9 +86,6 @@ const BModal = (props) => {
           <Button variant='primary' className='cls-modal' onClick={handleClose}>
             Close
           </Button>
-          {/* <Button variant="primary" onClick={handleClose}>
-                        Save Changes
-                    </Button> */}
         </Modal.Footer>
       </Modal>
     </>
@@ -96,5 +93,3 @@ const BModal = (props) => {
 };
 
 export default BModal;
-
-// stage for new branch
